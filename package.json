@@ -1,0 +1,17 @@
+{
+  "name": "percom",
+  "version": "1.0.0",
+  "description": "A calculation npm module that is to simplify the calculation of permutations and combinations",
+  "main": "index.js",
+  "repository": "https://github.com/kota-yata/percom",
+  "author": "Kota Yatagai (https://kota-yata.github.io)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jsdoc": "^3.6.4",
+    "mocha": "^7.1.2"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}
