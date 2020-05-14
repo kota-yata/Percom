@@ -4,7 +4,7 @@ A calculation npm module that is to simplify the calculation of permutations and
 # Usage
 
 ```
-$ npm i percom
+$ npm i Percom
 ```
 
  ## 1. Combinatioins (組み合わせ)
