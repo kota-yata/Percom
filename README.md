@@ -1,4 +1,6 @@
 # Percom
+[![Build Status](https://travis-ci.org/kota-yata/Percom.svg?branch=master)](https://travis-ci.org/kota-yata/Percom)
+
 A calculation npm module that is to simplify the calculation of permutations and combinations
 
 # Usage
