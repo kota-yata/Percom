@@ -1,6 +1,6 @@
 {
   "name": "percom",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A calculation npm module that is to simplify the calculation of permutations and combinations",
   "keywords": [
     "math",
