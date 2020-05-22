@@ -4,6 +4,5 @@ node_js:
   - 12
   - 10
   - 8
-dist: trusty
 cache: yarn
 script: yarn run test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
