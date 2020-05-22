@@ -22,7 +22,6 @@
   "private": false,
   "devDependencies": {
     "coveralls": "^3.1.0",
-    "jest": "^26.0.1",
     "jsdoc": "^3.6.4",
     "mocha": "^7.1.2"
   },
