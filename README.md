@@ -1,5 +1,7 @@
 # Percom
-[![npm version](https://badge.fury.io/js/percom.svg)](https://badge.fury.io/js/percom) [![Build Status](https://travis-ci.org/kota-yata/Percom.svg?branch=master)](https://travis-ci.org/kota-yata/Percom)
+[![npm version](https://badge.fury.io/js/percom.svg)](https://badge.fury.io/js/percom) [![Build Status](https://travis-ci.org/kota-yata/Percom.svg?branch=master)](https://travis-ci.org/kota-yata/Percom) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![NPM](https://nodei.co/npm/percom.png)](https://nodei.co/npm/percom/)
 
 A calculation npm module that is to simplify the calculation of permutations and combinations
 
