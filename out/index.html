@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script> -->
+    <script src="scripts/fuse.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme.css">
+    
+    
+    
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+</head>
+<body>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#com">com</a></li><li><a href="global.html#per">per</a></li></ul></div>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>Percom</h1>
+<p><a href="https://app.codacy.com/manual/kouta.giants0706/Percom?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kota-yata/Percom&amp;utm_campaign=Badge_Grade_Dashboard"><img src="https://api.codacy.com/project/badge/Grade/5912478c25eb4d3d942709f4a2f1f861" alt="Codacy Badge"></a>
+<a href="https://badge.fury.io/js/percom"><img src="https://badge.fury.io/js/percom.svg" alt="npm version"></a> <a href="https://travis-ci.org/kota-yata/Percom"><img src="https://travis-ci.org/kota-yata/Percom.svg?branch=master" alt="Build Status"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+<p><a href="https://nodei.co/npm/percom/"><img src="https://nodei.co/npm/percom.png" alt="NPM"></a></p>
+<p>A calculation npm module that is to simplify the calculation of permutations and combinations</p>
+<h1>Usage</h1>
+<pre class="prettyprint source"><code>$ npm i percom
+</code></pre>
+<h2>1. Combinatioins (組み合わせ)</h2>
+<pre class="prettyprint source lang-JavaScript"><code> percom.com(array,num); 
+ //array => Target array (対象の配列)
+ //num => Number to combine as combinations (組み合わせの数)
+</code></pre>
+<h4>Example</h4>
+<pre class="prettyprint source lang-JavaScript"><code>  const array = [&quot;A&quot;,&quot;B&quot;,&quot;C&quot;];
+  
+  const result1 = percom.com(array, 2);
+  //result1 = [ [ &quot;A&quot;, &quot;B&quot; ], [ &quot;A, &quot;C ], [ &quot;B&quot;, &quot;C&quot; ] ]
+  
+  const result2 = percom.com(array, 1);
+  //result2 = [ [ &quot;A&quot; ], [ &quot;B&quot; ], [ &quot;C&quot; ] ]
+</code></pre>
+<h2>2. Permutations (順列)</h2>
+<pre class="prettyprint source lang-JavaScript"><code>  percom.per(array,num);
+  //array => Target array (対象の配列)
+  //num => Number to combine as permutations (一つ一つの順列の要素数)
+</code></pre>
+<h4>Example</h4>
+<pre class="prettyprint source lang-JavaScript"><code>  const array = [&quot;A&quot;,&quot;B&quot;,&quot;C&quot;];
+  
+  const result1 = percom.per(array, 2);
+  //result1 = [ [ 'A', 'B' ], [ 'A', 'C' ], [ 'B', 'A' ], [ 'B', 'C' ], [ 'C', 'A' ], [ 'C', 'B' ] ]
+  
+  const result2 = percom.per(array, 1);
+  //result2 = [ [ &quot;A&quot; ], [ &quot;B&quot; ], [ &quot;C&quot; ] ]
+</code></pre>
+<h1>License</h1>
+<p>percom is under <a href="https://opensource.org/licenses/mit-license.php">MIT license</a></p>
+<h1>Author</h1>
+<p>Kota Yatagai (https://twitter.com/AlGoRiT94422608)</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+  
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script>
+var list = [{"title":"com","link":"<a href=\"global.html#com\">Global &rtrif; com</a>"},{"title":"per","link":"<a href=\"global.html#per\">Global &rtrif; per</a>"}];
+setupSearch(list)
+</script>
+
+ 
+<script type="text/javascript" src="scripts/misc.js"></script>
+</body>
+</html>

@@ -1,7 +1,5 @@
 "use strict";
 const percom = require("../index");
-const chai = require("chai");
-chai.should();
 
 // eslint-disable-next-line no-undef
 describe("index.js", () => {

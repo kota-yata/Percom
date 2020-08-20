@@ -26,9 +26,11 @@
     "mocha": "^7.1.2"
   },
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "clean-jsdoc-theme": "^2.2.11"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "docs": "node_modules/.bin/jsdoc index.js README.md --configure conf.json --verbose"
   }
 }

@@ -16,6 +16,7 @@ function rec(n, k) {
 }
 
 /**
+ * Combination
  * @param {array} array - Target array
  * @param {number} num - Number to combine
  * @return {array} Return all combinations
@@ -37,6 +38,7 @@ function com(array, num) {
 }
 
 /**
+ * Permutation
  * @param {array} array - Target array
  * @param {number} num - Number to combine as permutations
  * @return {array} Return all permutations
@@ -46,9 +48,7 @@ function com(array, num) {
  */
 const per = (array, num) => {
     const result = [];
-    if (array.length < num) {
-        return [];
-    }
+    if (array.length < num) return [];
     if (num === 1) {
         for (let i = 0; i < array.length; i++) {
             result[i] = [array[i]];
