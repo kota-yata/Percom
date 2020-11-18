@@ -119,3 +119,5 @@ dist
 
 # eslint
 # .eslintrc
+
+.DS_Store

@@ -1,5 +1,5 @@
 "use strict";
-const percom = require("../index");
+const percom = require("../src/index");
 
 // eslint-disable-next-line no-undef
 describe("index.js", () => {

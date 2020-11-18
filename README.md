@@ -1,5 +1,4 @@
 # Percom
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5912478c25eb4d3d942709f4a2f1f861)](https://app.codacy.com/manual/kouta.giants0706/Percom?utm_source=github.com&utm_medium=referral&utm_content=kota-yata/Percom&utm_campaign=Badge_Grade_Dashboard)
 [![npm version](https://badge.fury.io/js/percom.svg)](https://badge.fury.io/js/percom) [![Build Status](https://travis-ci.org/kota-yata/Percom.svg?branch=master)](https://travis-ci.org/kota-yata/Percom) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![NPM](https://nodei.co/npm/percom.png)](https://nodei.co/npm/percom/)
