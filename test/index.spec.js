@@ -1,38 +1,51 @@
-"use strict";
-const percom = require("../src/index");
+'use strict';
+/* eslint no-undef:0 */
+const percom = require('../src/index');
+const chai = require('chai');
 
-// eslint-disable-next-line no-undef
-describe("index.js", () => {
-    // eslint-disable-next-line no-undef
-    it("per-num-1", () => {
-        percom.per([2, 4, 2, 6], 2);
-    });
-    // eslint-disable-next-line no-undef
-    it("per-num-2", () => {
-        percom.per([1, 2, 3, 4, 5, 6, 7, 7, 4, 1, 45, 3, 11234, 1, 5, 5, 23, 12, 6, 3,], 3);
-    });
-    // eslint-disable-next-line no-undef
-    it("per-str-1", () => {
-        percom.per(["H", "e", "l", "l", "o"], 2);
-    });
-    // eslint-disable-next-line no-undef
-    it("per-str-2", () => {
-        percom.per(["JavaScript", "TypeScript", "Ruby", "C++", "Java", "Python", "GO", "C#", "Perl", "COBOL", "Dart", "C", "Objective-C", "Elm"], 3);
-    });
-    // eslint-disable-next-line no-undef
-    it("com-num-1", () => {
-        percom.com([2, 3, 4, 2], 3);
-    });
-    // eslint-disable-next-line no-undef
-    it("com-num-2", () => {
-        percom.com([34, 64, 234, 2, 5, 8, 57, 67, 90, 23324, 54], 4);
-    });
-    // eslint-disable-next-line no-undef
-    it("com-str-1", () => {
-        percom.per(["B", "y", "e"], 2);
-    });
-    // eslint-disable-next-line no-undef
-    it("com-str-2", () => {
-        percom.per(["HTML", "CSS", "SCSS", "PHP", "Kotlin", "Swift", "SQL", "BASIC", "F#", "Haskell", "Limbo", "Pascal", "Modula"], 2);
-    });
+describe('index.js', () => {
+  it('per-basic', () => {
+    const answer = percom.per([1, 2, 3], 2);
+    chai.assert.deepEqual(answer, [[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]);
+  });
+  it('per-error', () => {
+    const answerFunc = () => { percom.per([1, 2, 3], 5); };
+    chai.expect(answerFunc).to.throw();
+  });
+  it('countPer-basic', () => {
+    const answer = percom.countPer(8, 3);
+    chai.assert.deepEqual(answer, 336);
+  });
+  it('countPer-basic-n', () => {
+    const answer = percom.countPer(8, 1);
+    chai.assert.deepEqual(answer, 8);
+  });
+  it('countPer-error', () => {
+    const answerFunc = () => { percom.countPer(3, 5); };
+    chai.expect(answerFunc).to.throw(Error, 'Number of elements must be greater than number to choose');
+  });
+  it('com-basic', () => {
+    const answer = percom.com([1, 2, 3], 2);
+    chai.assert.deepEqual(answer, [[1, 2], [1, 3], [2, 3]]);
+  });
+  it('com-error', () => {
+    const answerFunc = () => { percom.com([1, 2, 3], 5); };
+    chai.expect(answerFunc).to.throw(Error, 'Number of elements of array must be greater than number to choose');
+  });
+  it('countCom-basic', () => {
+    const answer = percom.countCom(8, 3);
+    chai.assert.deepEqual(answer, 56);
+  });
+  it('countCom-basic-n', () => {
+    const answer = percom.countCom(8, 1);
+    chai.assert.deepEqual(answer, 8);
+  });
+  it('countCom-basic-1', () => {
+    const answer = percom.countCom(20, 20);
+    chai.assert.deepEqual(answer, 1);
+  });
+  it('countCom-error', () => {
+    const answerFunc = () => { percom.countCom(3, 5); };
+    chai.expect(answerFunc).to.throw(Error, 'Number of elements must be greater than number to choose');
+  });
 });

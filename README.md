@@ -11,13 +11,12 @@ A calculation npm module that is to simplify the calculation of permutations and
 $ npm i percom
 ```
 
- ## 1. Combinatioins (組み合わせ)
- ```JavaScript
-  percom.com(array,num); 
-  //array => Target array (対象の配列)
-  //num => Number to combine as combinations (組み合わせの数)
- ```
- 
+  ## 1. Combinatioins (組み合わせ)
+  ```JavaScript
+    percom.com(array,num); 
+    //array => Target array (対象の配列)
+    //num => Number to combine as combinations (組み合わせの数)
+  ```
   #### Example
   ```JavaScript
     const array = ["A","B","C"];
@@ -28,13 +27,25 @@ $ npm i percom
     const result2 = percom.com(array, 1);
     //result2 = [ [ "A" ], [ "B" ], [ "C" ] ]
   ```
+
+  ### Count the number of combination elements (組み合わせの数を数える)
+  ```JavaScript
+    percom.countCom(n, r);
+    //n => Number of elements : int (要素数)
+    //r => Number to choose : int (選ぶ要素の数)
+  ```
+  #### Example
+  ```JavaScript
+    percom.countCom(8, 3);
+    // => 56
+  ```
   
- ## 2. Permutations (順列)
- ```JavaScript
-   percom.per(array,num);
-   //array => Target array (対象の配列)
-   //num => Number to combine as permutations (一つ一つの順列の要素数)
- ```
+  ## 2. Permutations (順列)
+  ```JavaScript
+    percom.per(array,num);
+    //array => Target array (対象の配列)
+    //num => Number to combine as permutations (一つ一つの順列の要素数)
+  ```
  
   #### Example
   ```JavaScript
@@ -46,9 +57,35 @@ $ npm i percom
     const result2 = percom.per(array, 1);
     //result2 = [ [ "A" ], [ "B" ], [ "C" ] ]
   ```
-  
+  ### Count the number of permutation elements (順列の数を数える)
+  ```JavaScript
+    percom.countPer(n, r);
+    //n => Number of elements : int (要素数)
+    //r => Number to choose : int (選ぶ要素の数)
+  ```
+  #### Example
+  ```JavaScript
+    percom.countPer(8, 3);
+    // => 336
+  ```
+
+
+# Test Coverage
+![image](https://user-images.githubusercontent.com/51294895/104125816-91bcb880-539c-11eb-9f87-71df37c3644a.png)
+
+Both uncovered lines are returning of recursive function 
+
 # License
   percom is under [MIT license](https://opensource.org/licenses/mit-license.php)
   
-# Author
-  Kota Yatagai (https://twitter.com/AlGoRiT94422608)
+# Development
+```javascript
+yarn install
+
+// before create PR
+yarn mocha
+```
+Since lint-staged and husky are set up, your code will be formatted before commit.
+
+# Developer
+  Kota Yatagai (https://twitter.com/kota_yata)
