@@ -37,7 +37,9 @@
     "coverage": "nyc mocha"
   },
   "nyc": {
-    "include": [ "src/*.js" ]
+    "include": [
+      "src/*.js"
+    ]
   },
   "husky": {
     "hooks": {
