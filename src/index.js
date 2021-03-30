@@ -1,7 +1,6 @@
 'use strict';
 
 //Combination : Referenced from https://qiita.com/41semicolon/items/55e78a6100d9954676ff
-//Permutation : Referenced from https://tech-blog.s-yoshiki.com/entry/144
 const per = require('./permutation.js');
 const com = require('./combination.js');
 const permutation = per.per;
