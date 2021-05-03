@@ -13,6 +13,8 @@ $ npm i percom
 
   ## 1. Combinatioins (組み合わせ)
   ```JavaScript
+    const percom = require('percom');
+  
     percom.com(array,num); 
     //array => Target array (対象の配列)
     //num => Number to combine as combinations (組み合わせの数)
