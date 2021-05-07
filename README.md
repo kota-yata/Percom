@@ -13,7 +13,7 @@ $ npm i percom
 
   ## 1. Combinatioins (組み合わせ)
   ```JavaScript
-    const percom = require('percom');
+    const percom = require("percom");
   
     percom.com(array,num); 
     //array => Target array (対象の配列)
