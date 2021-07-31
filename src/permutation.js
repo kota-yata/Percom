@@ -12,9 +12,7 @@ const calcPer = (array, num, current = [], result = []) => {
     tempCurrent.push(array[i]);
     const slicedArray = filterArray(array, i);
     const returned = calcPer(slicedArray, num, tempCurrent, result);
-    if (returned === null) {
-      result.push(tempCurrent);
-    }
+    if (returned === null) result.push(tempCurrent);
     tempCurrent = current.slice(0, current.length);
   }
   return result;

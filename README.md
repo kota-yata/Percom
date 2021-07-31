@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/percom.png)](https://nodei.co/npm/percom/)
 
-A calculation npm module that is to simplify the calculation of permutations and combinations
+Combination and Permutation library
 
 # Usage
 

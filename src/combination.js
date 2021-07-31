@@ -1,15 +1,3 @@
-const rec = (n, k) => {
-  if (k === 0) return [[]];
-  const result = [];
-  for (let i = 0; i < n; i++) {
-    if (n - i - 1 < k - 1) continue;
-    rec(n - i - 1, k - 1).forEach((js) => {
-      result.push([i, ...js.map((j) => j + i + 1)]);
-    });
-  }
-  return result;
-};
-
 /**
 * Combination
 * @param {array} array - Target array
@@ -19,18 +7,26 @@ const rec = (n, k) => {
 * const result = com([1,2,3],2);
 * //result = [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ]
 */
-const com = (array, num) => {
-  if (array.length < num) throw new Error('Number of elements of array must be greater than number to choose');
-  const last = rec(array.length, num);
-  const result = [];
-  for (let ite = 0; ite < last.length; ite++) {
-    const answer = [];
-    for (let fin = 0; fin < last[ite].length; fin++) {
-      answer.push(array[last[ite][fin]]);
-    }
-    result.push(answer);
+const calcCom = (array, num, current = [], result = []) => {
+  if (num <= 0) {
+    result.push(current);
+    return result;
+  }
+  const thisArray = [...array]; // Copy only values in order to execute mutable method shift() safely
+  const nextNum = num - 1;
+  while (thisArray.length >= num) {
+    const thisCurrent = [...current]; // Copy only values in order to execute mutable method push() safely
+    thisCurrent.push(thisArray[0]);
+    thisArray.shift();
+    calcCom(thisArray, nextNum, thisCurrent, result);
   }
   return result;
+};
+
+const com = (array, num) => {
+  if (array.length < num) throw new Error('Number of elements of array must be greater than number to choose');
+  const answer = calcCom(array, num);
+  return answer;
 };
 
 const countCom = (n, r) => {
