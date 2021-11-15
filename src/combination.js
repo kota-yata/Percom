@@ -15,8 +15,7 @@ const calcCom = (array, num, current = [], result = []) => {
   const thisArray = [...array]; // Copy only values in order to execute mutable method shift() safely
   const nextNum = num - 1;
   while (thisArray.length >= num) {
-    const thisCurrent = [...current]; // Copy only values in order to execute mutable method push() safely
-    thisCurrent.push(thisArray[0]);
+    const thisCurrent = [...current, thisArray[0]];
     thisArray.shift();
     calcCom(thisArray, nextNum, thisCurrent, result);
   }
