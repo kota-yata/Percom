@@ -1,7 +1,7 @@
 /**
 * Combination
 * @param {array} array - Target array
-* @param {number} num - Number to combine
+* @param {number} num - Number of elements in a combination
 * @return {array} Return all combinations
 * @example
 * const result = com([1,2,3],2);

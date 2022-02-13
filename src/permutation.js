@@ -21,7 +21,7 @@ const calcPer = (array, num, current = [], result = []) => {
 /**
  * Permutation
  * @param {array} array - Target array
- * @param {number} num - Number to combine as permutations
+ * @param {number} num - Number of elements in a permutation
  * @return {array} Return all permutations
  * @example
  * const result = per([1, 2, 3], 2);
