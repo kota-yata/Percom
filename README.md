@@ -3,85 +3,97 @@
 
 [![NPM](https://nodei.co/npm/percom.png)](https://nodei.co/npm/percom/)
 
-npm package listing and calculating combination and permutation
+Utility for listing and counting combinations and permutations.
 
-# Usage
+# Install
 
 ```
 $ npm i percom
 ```
 
-  ## 1. Listing every possible combinatioins (組み合わせ)
-  ```JavaScript
-    import percom from "percom";
-  
-    percom.com(array,num); 
-    //array => Target array (対象の配列)
-    //num => Number of elements in a combination (組み合わせの数)
-  ```
-  #### Example
-  ```JavaScript
-    const array = ["A","B","C"];
-    
-    const result1 = percom.com(array, 2);
-    //result1 = [ [ "A", "B" ], [ "A, "C ], [ "B", "C" ] ]
-    
-    const result2 = percom.com(array, 1);
-    //result2 = [ [ "A" ], [ "B" ], [ "C" ] ]
-  ```
+# Usage
 
-  ### Count the number of possible combination (組み合わせの数を数える)
-  ```JavaScript
-    percom.countCom(n, r);
-    //n => Number of elements in an array (要素数)
-    //r => Number of elements in a combination (選ぶ要素の数)
-  ```
-  #### Example
-  ```JavaScript
-    percom.countCom(8, 3);
-    // => 56
-  ```
-  
-  ## 2. Listing every possible permutaiton (順列)
-  ```JavaScript
-    percom.per(array,num);
-    //array => Target array (対象の配列)
-    //num => Number of elements in a permutation (一つ一つの順列の要素数)
-  ```
- 
-  #### Example
-  ```JavaScript
-    const array = ["A","B","C"];
-    
-    const result1 = percom.per(array, 2);
-    //result1 = [ [ 'A', 'B' ], [ 'A', 'C' ], [ 'B', 'A' ], [ 'B', 'C' ], [ 'C', 'A' ], [ 'C', 'B' ] ]
-    
-    const result2 = percom.per(array, 1);
-    //result2 = [ [ "A" ], [ "B" ], [ "C" ] ]
-  ```
-  ### Count the number of possible permutation (順列の数を数える)
-  ```JavaScript
-    percom.countPer(n, r);
-    //n => Number of elements in an array (要素数)
-    //r => Number of elements in a permutation (一つ一つの順列の要素数)
-  ```
-  #### Example
-  ```JavaScript
-    percom.countPer(8, 3);
-    // => 336
-  ```
+## 1. List all combinations
+
+```javascript
+import percom from "percom";
+
+percom.com(array, r);
+// array: source array
+// r: size of each combination
+```
+
+Example
+
+```javascript
+const array = ["A", "B", "C"];
+
+const result1 = percom.com(array, 2);
+// result1 = [["A", "B"], ["A", "C"], ["B", "C"]]
+
+const result2 = percom.com(array, 1);
+// result2 = [["A"], ["B"], ["C"]]
+```
+
+### Count combinations
+
+```javascript
+percom.countCom(n, r);
+// n: number of elements
+// r: size of each combination
+```
+
+Example
+
+```javascript
+percom.countCom(8, 3); // => 56
+```
+
+## 2. List all permutations
+
+```javascript
+percom.per(array, r);
+// array: source array
+// r: size of each permutation
+```
+
+Example
+
+```javascript
+const array = ["A", "B", "C"];
+
+const result1 = percom.per(array, 2);
+// result1 = [["A", "B"], ["A", "C"], ["B", "A"], ["B", "C"], ["C", "A"], ["C", "B"]]
+
+const result2 = percom.per(array, 1);
+// result2 = [["A"], ["B"], ["C"]]
+```
+
+### Count permutations
+
+```javascript
+percom.countPer(n, r);
+// n: number of elements
+// r: size of each permutation
+```
+
+Example
+
+```javascript
+percom.countPer(8, 3); // => 336
+```
 
 # License
-  percom is under [MIT license](https://opensource.org/licenses/mit-license.php)
+percom is available under the [MIT License](https://opensource.org/licenses/mit-license.php).
   
 # Development
 ```javascript
 yarn install
 
-// before create PR
+// before creating a PR
 yarn mocha
 ```
 Since lint-staged and husky are set up, your code will be formatted before commit.
 
 # Developer
-  Kota Yatagai (https://kota_yata.com)
+Kota Yatagai (https://kota_yata.com)
